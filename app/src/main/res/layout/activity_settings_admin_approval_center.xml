@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".all_spaces.SelectSpaceActivity">
+
+    <ImageView
+        android:id="@+id/iv_cross"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/cross"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_select_space"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/approval_center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_cross" />
+
+    <View
+        android:id="@+id/view_settings"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/tv_select_space"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/divider_gray" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_select_space"
+        android:layout_marginTop="38dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_user_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_user_list" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="5dp">
+
+        <include layout="@layout/bottom_buttons" />
+    </LinearLayout>
+
+</RelativeLayout>

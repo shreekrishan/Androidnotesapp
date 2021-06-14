@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.EventDetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_cross"
+                android:layout_width="22.5dp"
+                android:layout_height="22.5dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/cross"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_day_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:text="Wednesday 17"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_cross" />
+
+            <TextView
+                android:id="@+id/tv_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:fontFamily="@font/roboto"
+                android:text="November"
+                android:textColor="@color/hint_color"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_day_date" />
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_month">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/icon_music"/>
+
+                <TextView
+                    android:id="@+id/tv_daily_panchanga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:text="Daily Panchanga"/>
+
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/break_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="18dp"
+                android:background="@color/hint_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear1" />
+
+            <LinearLayout
+                android:layout_width="211dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/break_line" >
+                <TextView
+                    android:id="@+id/tv_tithi_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="Tithi"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/tv_tithi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:layout_marginTop="4dp"
+                    android:text="Ashtami - Up To 17:19:37"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/tv_nakshatra_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="Nakshatra"
+                    android:layout_marginTop="42dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/tv_nakshatra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="Purva Phalguni - Up To 13:47:59"
+                    android:layout_marginTop="4dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/tv_karan_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="Karan"
+                    android:layout_marginTop="42dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/tv_karan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text=" Kolav - Up To 17:19:37, Tetil - Up To 28:23:19"
+                    android:layout_marginTop="4dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tv_paksha_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="Paksha"
+                    android:layout_marginTop="42dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/tv_paksha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:layout_marginTop="4dp"
+                    android:text="Krishna"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="5dp">
+        <include layout="@layout/bottom_buttons" />
+    </LinearLayout>
+
+</RelativeLayout>

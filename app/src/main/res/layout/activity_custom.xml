@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".all_spaces.MySpaceDateTimeActivity">
+
+    <ImageView
+        android:id="@+id/iv_cross"
+        android:layout_width="22.5dp"
+        android:layout_height="22.5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/cross"
+        android:layout_alignParentRight="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linear_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/tv_title">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/custom"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="24dp" />
+
+    </LinearLayout>
+    <View
+        android:id="@+id/break_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="26dp"
+        android:background="@color/hint_color"
+        android:layout_below="@+id/linear_1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/break_line">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="150dp">
+
+
+            <LinearLayout
+                android:id="@+id/frame_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:weightSum="1">
+
+
+
+                <TextView
+                    android:layout_weight="0.7"
+                    android:id="@+id/tv_repeats"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/repeats"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/purple_500"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_weight="0.3"
+                    android:id="@+id/tv_weeks"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weekly"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/purple_500"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/frame_cal"
+                android:layout_below="@id/frame_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:gravity="center_horizontal"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                >
+
+                <NumberPicker
+                    android:id="@+id/np_weeks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:datePickerMode="spinner"
+                    android:calendarViewShown="false"
+                    android:theme="@style/DefaultNumberPickerTheme"
+                    tools:ignore="MissingConstraints" />
+                <!--<DatePicker
+                    android:id="@+id/datePicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    android:spinnersShown="true"
+                    android:theme="@style/DefaultNumberPickerTheme"
+                    style="@style/date_picker"/>-->
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/frame_cal3"
+                android:layout_below="@+id/frame_cal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:weightSum="1">
+
+
+
+                <TextView
+                    android:layout_weight="0.7"
+                    android:id="@+id/tv_repeatson"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/repeaton"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/purple_500"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_weight="0.3"
+                    android:id="@+id/tv_weekon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/monday"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/purple_500"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/frame_cal1"
+                android:layout_below="@id/frame_cal3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:gravity="center_horizontal"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                >
+
+                <NumberPicker
+                    android:id="@+id/np_week"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:datePickerMode="spinner"
+                    android:calendarViewShown="false"
+                    android:theme="@style/DefaultNumberPickerTheme"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/frame_cal33"
+                android:layout_below="@+id/frame_cal1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:weightSum="1">
+
+
+
+                <TextView
+                    android:layout_weight="0.7"
+                    android:id="@+id/tv_endon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/endson"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/purple_500"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_weight="0.3"
+                    android:id="@+id/tv_never"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/never"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/purple_500"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/frame_never"
+                android:layout_below="@id/frame_cal33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:gravity="center_horizontal"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                >
+
+                <NumberPicker
+                    android:id="@+id/np_never"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:datePickerMode="spinner"
+                    android:calendarViewShown="false"
+                    android:theme="@style/DefaultNumberPickerTheme"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+            <View
+                android:id="@+id/break_line2"
+                android:layout_below="@id/frame_never"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="39dp"
+                android:background="@color/hint_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frame_3" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="5dp">
+        <include layout="@layout/bottom_buttons" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragmen_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

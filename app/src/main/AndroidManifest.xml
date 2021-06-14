@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="common.survin_it.notesapp">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:hardwareAccelerated="false"
+        android:theme="@style/Theme.Notesapp">
+        <activity android:name=".settings.ReOTPActivity"></activity>
+        <activity
+            android:name=".all_spaces.My_SchoolActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".settings.SettingsActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".settings.Settings_CalendarActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".settings.Settings_AccountActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".settings.Settings_ChangeNumberActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".settings.Settings_NotificationActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".settings.Settings_ProfileActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".all_spaces.Myspace_pdfActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".all_spaces.CustomActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".settings.Settings_FeedbackActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".settings.Settings_InviteFriendsActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".settings.Settings_Delete_AccountActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".settings.Settings_AdmincenterActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".settings.Settings_AdminSubscriptionrActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".all_spaces.TodolistActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".all_spaces.MylinkActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".settings.Settings_AdminApprovalcenterActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".all_spaces.TextColorActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".all_spaces.MySpaceDateTimeActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".all_spaces.Myspace_detailsActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".home.testcalendar"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".all_spaces.InsertBlockActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".share.ShareActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".meeting.CreateMeetingActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".CalendarActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" /> <!--  -->
+        <!-- <activity -->
+        <!-- android:name=".settings.SettingsActivity" -->
+        <!-- android:theme="@style/Theme.TimeSpace.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name=".settings.Settings_CalendarActivity" -->
+        <!-- android:theme="@style/Theme.TimeSpace.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name=".settings.Settings_AccountActivity" -->
+        <!-- android:theme="@style/Theme.TimeSpace.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name=".settings.Settings_ChangeNumberActivity" -->
+        <!-- android:theme="@style/Theme.TimeSpace.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name=".settings.Settings_NotificationActivity" -->
+        <!-- android:theme="@style/Theme.TimeSpace.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name=".settings.Settings_ProfileActivity" -->
+        <!-- android:theme="@style/Theme.TimeSpace.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name=".settings.Settings_FeedbackActivity" -->
+        <!-- android:theme="@style/Theme.TimeSpace.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name=".settings.Settings_InviteFriendsActivity" -->
+        <!-- android:theme="@style/Theme.TimeSpace.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name=".settings.Settings_Delete_AccountActivity" -->
+        <!-- android:theme="@style/Theme.TimeSpace.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name=".settings.Settings_AdmincenterActivity" -->
+        <!-- android:theme="@style/Theme.TimeSpace.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name=".settings.Settings_AdminApprovalcenterActivity" -->
+        <!-- android:theme="@style/Theme.TimeSpace.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name=".settings.Settings_AdminSubscriptionrActivity" -->
+        <!-- android:theme="@style/Theme.TimeSpace.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name=".all_spaces.TextColorActivity" -->
+        <!-- android:theme="@style/Theme.TimeSpace.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name=".all_spaces.MySpaceDateTimeActivity" -->
+        <!-- android:theme="@style/Theme.TimeSpace.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name=".all_spaces.Myspace_detailsActivity" -->
+        <!-- android:theme="@style/Theme.TimeSpace.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name=".home.testcalendar" -->
+        <!-- android:theme="@style/Theme.TimeSpace.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name=".all_spaces.InsertBlockActivity" -->
+        <!-- android:theme="@style/Theme.TimeSpace.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name=".share.ShareActivity" -->
+        <!-- android:theme="@style/Theme.TimeSpace.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name=".meeting.CreateMeetingActivity" -->
+        <!-- android:theme="@style/Theme.TimeSpace.NoActionBar" /> -->
+        <activity
+            android:name=".spaces.CreateNotesActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".share.SharedActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".spaces.SpacesActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".settings.IconActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".events.LocalEventsActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".all_spaces.MySpacesActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".all_spaces.AllEventsListActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".all_spaces.SpaceCreatedActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".all_spaces.SelectSpaceActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".home.LocalActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".home.EventDetailsActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".home.HomeActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".home.EventListByCalenderActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".register.OtpActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".GoodMorning2Activity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".GoodMorningActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".register.SelectLocationActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".register.RegistrationActivity_1"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".ChooseLanguageActivity"
+            android:theme="@style/Theme.TimeSpace.NoActionBar" />
+        <activity
+            android:name=".Splash_Screen"
+            android:theme="@style/Theme.TimeSpace.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

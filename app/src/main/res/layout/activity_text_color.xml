@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.AppCompat"
+    android:padding="10dp"
+    tools:context=".all_spaces.TextColorActivity">
+    <ImageView
+        android:id="@+id/iv_cross1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/cross"
+        android:layout_alignParentRight="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:id="@+id/ll_select_space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal">
+             <TextView
+            android:id="@+id/tv_select_space"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:textSize="24sp"
+            android:layout_marginTop="38dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/color"
+            />
+    </LinearLayout>
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_select_space"
+        android:layout_marginTop="18dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:id="@+id/ll_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="left"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/text_color"
+                    android:background="@color/basecolor"
+                    android:textColor="@color/black"
+                    android:padding="20dp"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/text_default"
+                    android:textColor="@color/black"
+                    android:padding="20dp"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/text_gray"
+                    android:textColor="@color/gray"
+                    android:padding="20dp"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/text_blue"
+                    android:textColor="@color/blue"
+                    android:padding="20dp"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/text_red"
+                    android:textColor="@color/red"
+                    android:padding="20dp"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/text_yellow"
+                    android:textColor="@color/yellow"
+                    android:padding="20dp"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/text_green"
+                    android:textColor="@color/green"
+                    android:padding="20dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/background_color"
+                    android:textColor="@color/black"
+                    android:background="@color/basecolor"
+                    android:padding="20dp"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/defualt_color"
+                    android:textColor="@color/black"
+                    android:padding="20dp"
+                    android:textSize="16sp" />
+             <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/bg_color_gray"
+                    android:textColor="@color/black"
+                    android:padding="20dp"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/bg_color_blue"
+                    android:textColor="@color/black"
+                    android:padding="20dp"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/bg_color_red"
+                    android:textColor="@color/black"
+                    android:padding="20dp"
+                    android:textSize="16sp" />
+    <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/bg_color_yellow"
+                    android:textColor="@color/black"
+                    android:padding="20dp"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="5dp">
+        <include layout="@layout/bottom_buttons" />
+    </LinearLayout>
+</RelativeLayout>

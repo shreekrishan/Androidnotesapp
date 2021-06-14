@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".all_spaces.MySpaceDateTimeActivity">
+
+    <ImageView
+        android:id="@+id/iv_cross"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:inputType="textMultiLine"
+        android:src="@drawable/cross"
+        android:layout_alignParentRight="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linear_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="left"
+        android:layout_below="@+id/tv_title">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/space_icon"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="@string/myspace"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="32dp"
+        android:gravity="left"
+        android:layout_below="@+id/linear_1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/todolist"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="24dp" />
+
+    </LinearLayout>
+    <View
+        android:id="@+id/break_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="26dp"
+        android:background="@color/hint_color"
+        android:layout_below="@+id/linear_2" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/break_line">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="150dp">
+            <LinearLayout
+                android:id="@+id/ll_marketing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+               >
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/marketing"
+    android:textSize="20dp"
+    android:textStyle="bold"/>
+
+              <androidx.recyclerview.widget.RecyclerView
+                  android:id="@+id/rv_marketing"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  tools:listitem="@layout/marketing_list"
+                  />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/frame_2"
+                android:layout_below="@+id/ll_marketing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:weightSum="1">
+
+
+
+                <EditText
+                    android:layout_weight="0.9"
+                    android:id="@+id/tv_todolink"
+                    android:layout_width="0dp"
+                    android:lines="2"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/writing"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/purple_500"
+                    android:textSize="16sp"/>
+
+                <ImageView
+                    android:layout_weight="0.1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icon_tick"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="5dp">
+        <include layout="@layout/bottom_buttons" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragmen_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

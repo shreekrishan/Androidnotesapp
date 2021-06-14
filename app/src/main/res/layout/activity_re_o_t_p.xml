@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".register.OtpActivity">
+
+    <ImageView
+        android:layout_width="22.5dp"
+        android:layout_height="22.5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/cross"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_otp_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginRight="43dp"
+        android:text="@string/otp_note"
+        android:textSize="18sp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/enter_otp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginRight="43dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/otp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_otp_text" />
+
+    <EditText
+        android:id="@+id/otp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter_otp"
+        android:gravity="center_horizontal" />
+
+
+    <Button
+        android:id="@+id/validate_button"
+        android:layout_width="177dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/roboto"
+        android:background="@drawable/button_shape"
+        android:text="@string/validate_number"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otp" />
+
+    <FrameLayout
+        android:visibility="visible"
+        android:id="@+id/frame_resend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/validate_button">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto"
+            android:textColor="#999999"
+            android:text="@string/resend_otp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:fontFamily="@font/roboto"
+            android:textSize="18sp"
+            android:textColor="#999999"
+            android:text="@string/counting" />
+    </FrameLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+        android:layout_marginLeft="67dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginRight="67dp"
+        android:text="@string/many_attempts"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/validate_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

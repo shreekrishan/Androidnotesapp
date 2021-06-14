@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linear_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:src="@drawable/space_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:text="@string/my_space"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linear_1">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linear_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="#f2f2f2"
+                android:padding="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="74dp"
+                        android:layout_marginLeft="74dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tv_main_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/my_events"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="24sp" />
+                        <TextView
+                            android:id="@+id/tv_tags"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/all"
+                            android:layout_marginTop="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_gravity="end|center"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/share"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/share"
+                            android:layout_marginLeft="16dp"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_event_year"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="46dp"
+                android:layout_marginLeft="46dp"
+                android:layout_marginTop="27dp"
+                android:text="2020  January"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_4" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_date_month"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="46dp"
+                android:layout_marginLeft="46dp"
+                android:layout_marginTop="16dp"
+                android:text="jan 18"
+                android:textColor="@color/purple_500"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_event_year" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_event_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="16dp"
+                android:text="Holiday"
+                android:textColor="@color/purple_500"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_date_month"
+                app:layout_constraintTop_toBottomOf="@+id/tv_event_year" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:visibility="visible"
+                android:id="@+id/rv_event_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_event_year"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_event_list" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="5dp">
+        <include layout="@layout/bottom_buttons" />
+    </LinearLayout>
+
+
+</RelativeLayout>
