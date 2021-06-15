@@ -179,9 +179,7 @@ public class OtpActivity extends AppCompatActivity {
 
                             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy-hh-mm-ss");
                             String currentDateTime = simpleDateFormat.format(new Date());
-
-
-
+                            long timestamp = Long.parseLong(currentDateTime) * 1000;
                             //Users user = new Users();
                             user.setName(name);
                             user.setMobile(number);
@@ -194,7 +192,7 @@ public class OtpActivity extends AppCompatActivity {
                             user.setOtp("0");
                             user.setDeleted("0");
                             user.setCreated_at(currentDateTime);
-                            user.setUpdated_at(currentDateTime);
+                            user.setUpdated_at(Long.toString(timestamp));
                             firebaseAuth = FirebaseAuth.getInstance();
                             Common.db.collection("users").document(firebaseAuth.getUid())
                                     .set(user)
